@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elva | Visual Dev</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <section class="intro-header">
+    <img src="images/name-logo.png" alt="Elva name logo" class="name-logo" />
+  </section>
+
+  <header class="topbar">
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Visual Dev</a></li>
+        <li><a href="sketchbook.html">Sketchbook</a></li>
+        <li><a href="3d.html">3D</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <h2 class="page-title">Visual Development</h2>
+
+    <section class="gallery-grid">
+      <div class="art-card">
+        <img src="images/visdev1.jpg" alt="Visual development piece 1" />
+      </div>
+      <div class="art-card">
+        <img src="images/visdev2.jpg" alt="Visual development piece 2" />
+      </div>
+      <div class="art-card">
+        <img src="images/visdev3.jpg" alt="Visual development piece 3" />
+      </div>
+      <div class="art-card">
+        <img src="images/visdev1.jpg" alt="Visual development piece 4" />
+      </div>
+      <div class="art-card">
+        <img src="images/visdev2.jpg" alt="Visual development piece 5" />
+      </div>
+      <div class="art-card">
+        <img src="images/visdev3.jpg" alt="Visual development piece 6" />
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="closeLightbox">&times;</button>
+    <button class="lightbox-arrow left" id="prevBtn">&#10094;</button>
+    <img class="lightbox-image" id="lightboxImage" src="" alt="Expanded artwork" />
+    <button class="lightbox-arrow right" id="nextBtn">&#10095;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
