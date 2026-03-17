@@ -21,8 +21,8 @@
     <nav>
       <ul class="nav-links">
         <li><a href="index.html" class="active">Visual Dev</a></li>
-        <li><a href="sketchbook.html">Sketchbook</a></li>
         <li><a href="3d.html">3D</a></li>
+        <li><a href="sketchbook.html">Sketchbook</a></li>
         <li><a href="games.html">Games</a></li>
         <li><a href="about.html">About</a></li>
       </ul>
@@ -31,34 +31,52 @@
 
   <main class="page-content">
     <h2 class="page-title">Visual Development</h2>
+  
+    <div class="visdev-container">
+  
+      <div class="visdev-piece">
+        <div class="art-card visdev-card visdev-main-card">
+          <img class="main-image" src="vis/Relief6 copy.png" alt="">
+          <div class="visdev-bar">Relief or Disbelief Animation | Background Design</div>
+        </div>
+  
+        <div class="sub-images">
+          <img src="vis/Relief4 copy.png" alt="">
+          <img src="vis/Relief2 copy.png" alt="">
+          <img src="vis/Relief3 copy.png" alt="">
+        </div>
+      </div>
+  
+      <div class="visdev-container">
+      <div class="visdev-piece">
+        <div class="art-card visdev-card visdev-main-card">
+          <img class="main-image" src="vis/title.png" alt="">
+          <div class="visdev-bar">Pigeon Wars — Character Illustration</div>
+        </div>
+  
+        <div class="sub-images">
+          <img src="vis/birdprotratit.jpg" alt="">
+          <img src="vis/manpotrait.jpg" alt="">
+        </div>
+      </div>
+      </div>
 
-    <section class="gallery-grid">
-      <div class="art-card">
-        <img src="images/visdev1.jpg" alt="Visual development piece 1" />
+      <div class="visdev-container">
+          <div class="visdev-piece">
+              <div class="art-card visdev-main-card">
+                <img class="main-image" src="vis/whale shark copy.jpg" alt="">
+                <div class="visdev-bar">Pigeon Wars — Character Illustration</div>
+              </div>
       </div>
-      <div class="art-card">
-        <img src="images/visdev2.jpg" alt="Visual development piece 2" />
-      </div>
-      <div class="art-card">
-        <img src="vis/Screenshot 2026-03-17 at 5.35.40 PM.png" alt="Visual development piece 3" />
-      </div>
-      <div class="art-card">
-        <img src="vis/birdprotratit.jpg" alt="Visual development piece 4" />
-      </div>
-      <div class="art-card">
-        <img src="vis/manpotrait.jpg" alt="Visual development piece 5" />
-      </div>
-      <div class="art-card">
-        <img src="vis/Relief6 copy.png" alt="Visual development piece 6" />
-      </div>
-    </section>
+    </div>
+    </div>
   </main>
 
   <div class="lightbox" id="lightbox">
-    <button class="lightbox-close" id="closeLightbox">&times;</button>
-    <button class="lightbox-arrow left" id="prevBtn">&#10094;</button>
-    <img class="lightbox-image" id="lightboxImage" src="" alt="Expanded artwork" />
-    <button class="lightbox-arrow right" id="nextBtn">&#10095;</button>
+    <button class="lightbox-close" id="lightbox-close">&times;</button>
+    <button class="lightbox-arrow left" id="lightbox-prev">&#10094;</button>
+    <img class="lightbox-image" id="lightbox-image" src="" alt="">
+    <button class="lightbox-arrow right" id="lightbox-next">&#10095;</button>
   </div>
 
   <script src="script.js"></script>

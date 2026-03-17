@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <section class="intro-header">
     <img src="logos/fgaamelogo.png" alt="Elva name logo" class="name-logo" />
   </section>
@@ -21,21 +20,53 @@
     <nav>
       <ul class="nav-links">
         <li><a href="index.html">Visual Dev</a></li>
-        <li><a href="sketchbook.html">Sketchbook</a></li>
         <li><a href="3d.html" class="active">3D</a></li>
+        <li><a href="sketchbook.html">Sketchbook</a></li>
         <li><a href="games.html">Games</a></li>
         <li><a href="about.html">About</a></li>
       </ul>
     </nav>
   </header>
 
+
   <main class="page-content">
     <h2 class="page-title">3D</h2>
 
+  <div class="visdev-container">
+  
+    <div class="visdev-piece">
+      <div class="art-card visdev-card visdev-main-card">
+        <video class="main-image" autoplay muted loop playsinline>
+          <source src="3d/chinese enviroment/Sequence 01.mp4" type="video/mp4">
+        </video>
+      <div class="visdev-bar"> Maya • Substance Painter • Unreal </div>
+    </div>
+
+      <div class="sub-images">
+        <img src="3d/chinese enviroment/chinese1.webp" alt="">
+        <img src="3d/chinese enviroment/chinese.webp" alt="">
+        <img src="3d/chinese enviroment/chinese3.webp" alt="">
+ 
+      </div>
+    </div>
+      <div class="visdev-piece">
+        <div class="art-card visdev-main-card">
+          <img class="main-image" src="vis/fishsign/fishsign2.webp" alt="">
+        </div>
+  
+        <div class="sub-images">
+          <img src="vis/fishsign/fishsign3.webp" alt="">
+        </div>
+      </div>
+
+    </div>
+
+
+
     <section class="gallery-grid">
       <div class="art-card software-card">
-        <img src="images/3d1.jpg" alt="3D piece 1" />
-        <div class="software-bar">Maya • Substance Painter • Blender</div>
+        <img src="3d/Stuff.webp" alt="3D piece 1" />
+        <div class="software-bar">Maya • Blender</div>
       </div>
 
       <div class="art-card software-card">
@@ -63,15 +94,15 @@
         <div class="software-bar">Maya • Photoshop</div>
       </div>
     </section>
-  </main>
+
 
   <div class="lightbox" id="lightbox">
-    <button class="lightbox-close" id="closeLightbox">&times;</button>
-    <button class="lightbox-arrow left" id="prevBtn">&#10094;</button>
-    <img class="lightbox-image" id="lightboxImage" src="" alt="Expanded artwork" />
-    <button class="lightbox-arrow right" id="nextBtn">&#10095;</button>
+    <button class="lightbox-close" id="lightbox-close">&times;</button>
+    <button class="lightbox-arrow left" id="lightbox-prev">&#10094;</button>
+    <img class="lightbox-image" id="lightbox-image" src="" alt="">
+    <button class="lightbox-arrow right" id="lightbox-next">&#10095;</button>
   </div>
-
+  
   <script src="script.js"></script>
 </body>
 </html>

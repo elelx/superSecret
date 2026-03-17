@@ -1,86 +1,56 @@
-const galleryImages = document.querySelectorAll(".art-card img");
-const lightbox = document.getElementById("lightbox");
-const lightboxImage = document.getElementById("lightboxImage");
-const closeLightbox = document.getElementById("closeLightbox");
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
 
-let currentIndex = 0;
-const imagesArray = Array.from(galleryImages);
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImage = document.getElementById("lightbox-image");
+  const closeBtn = document.getElementById("lightbox-close");
+  const prevBtn = document.getElementById("lightbox-prev");
+  const nextBtn = document.getElementById("lightbox-next");
 
-function showImage(index) {
-  if (imagesArray.length === 0) return;
+  const clickableImages = Array.from(
+    document.querySelectorAll(
+      ".art-card img, .visdev-piece .main-image, .visdev-piece .sub-images img"
+    )
+  );
 
-  if (index < 0) {
-    currentIndex = imagesArray.length - 1;
-  } else if (index >= imagesArray.length) {
-    currentIndex = 0;
-  } else {
+  let currentIndex = 0;
+
+  clickableImages.forEach((img, index) => {
+    img.addEventListener("click", () => {
+      currentIndex = index;
+      lightboxImage.src = img.src;
+      lightbox.classList.add("show");
+    });
+  });
+
+  function showImage(index) {
+    if (index < 0) index = clickableImages.length - 1;
+    if (index >= clickableImages.length) index = 0;
+
     currentIndex = index;
+    lightboxImage.src = clickableImages[currentIndex].src;
   }
 
-  lightboxImage.src = imagesArray[currentIndex].src;
-  lightboxImage.alt = imagesArray[currentIndex].alt;
-}
-
-function openLightbox(index) {
-  showImage(index);
-  lightbox.classList.add("show");
-  document.body.style.overflow = "hidden";
-}
-
-function closeBox() {
-  lightbox.classList.remove("show");
-  document.body.style.overflow = "";
-}
-
-imagesArray.forEach((img, index) => {
-  img.addEventListener("click", () => {
-    openLightbox(index);
-  });
-});
-
-if (nextBtn) {
-  nextBtn.addEventListener("click", (event) => {
-    event.stopPropagation();
-    showImage(currentIndex + 1);
-  });
-}
-
-if (prevBtn) {
-  prevBtn.addEventListener("click", (event) => {
-    event.stopPropagation();
+  prevBtn.addEventListener("click", () => {
     showImage(currentIndex - 1);
   });
-}
 
-if (closeLightbox) {
-  closeLightbox.addEventListener("click", (event) => {
-    event.stopPropagation();
-    closeBox();
+  nextBtn.addEventListener("click", () => {
+    showImage(currentIndex + 1);
   });
-}
 
-if (lightbox) {
-  lightbox.addEventListener("click", (event) => {
-    if (event.target === lightbox) {
-      closeBox();
+  closeBtn.addEventListener("click", () => {
+    lightbox.classList.remove("show");
+  });
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.remove("show");
     }
   });
-}
 
-document.addEventListener("keydown", (event) => {
-  if (!lightbox || !lightbox.classList.contains("show")) return;
+  document.addEventListener("keydown", (e) => {
+    if (!lightbox.classList.contains("show")) return;
 
-  if (event.key === "ArrowRight") {
-    showImage(currentIndex + 1);
-  }
-
-  if (event.key === "ArrowLeft") {
-    showImage(currentIndex - 1);
-  }
-
-  if (event.key === "Escape") {
-    closeBox();
-  }
-});
+    if (e.key === "Escape") lightbox.classList.remove("show");
+    if (e.key === "ArrowLeft") showImage(currentIndex - 1);
+    if (e.key === "ArrowRight") showImage(currentIndex + 1);
+  });
