@@ -187,6 +187,7 @@ body {
   font-size: 2rem;
   font-weight: 500;
   margin-bottom: 18px;
+  color: #51d355;
 }
 
 .about-text p {
@@ -201,7 +202,7 @@ body {
   font-size: 0.95rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #666;
+  color: #51d355;
 }
 
 .info-list {
@@ -317,6 +318,16 @@ body {
 
 .sub-images img {
   height: 150px;
+}
+
+.sub-images2 {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.sub-images2 img {
+  height: 350px;
 }
 
 /* hover effect (your style) */
