@@ -7,7 +7,7 @@
 
   const clickableImages = Array.from(
     document.querySelectorAll(
-      ".art-card img, .visdev-piece .main-image, .visdev-piece .sub-images img"
+      ".art-card img, .visdev-piece .main-image, .visdev-piece .sub-images img, .visdev-piece .sub-images2 img"
     )
   );
 
