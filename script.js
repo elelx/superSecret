@@ -54,3 +54,23 @@
     if (e.key === "ArrowLeft") showImage(currentIndex - 1);
     if (e.key === "ArrowRight") showImage(currentIndex + 1);
   });
+
+  const visdevContainer = document.getElementById("visdevContainer");
+const listViewBtn = document.getElementById("listViewBtn");
+const gridViewBtn = document.getElementById("gridViewBtn");
+
+listViewBtn.addEventListener("click", () => {
+  visdevContainer.classList.remove("grid-view");
+  visdevContainer.classList.add("list-view");
+
+  listViewBtn.classList.add("active");
+  gridViewBtn.classList.remove("active");
+});
+
+gridViewBtn.addEventListener("click", () => {
+  visdevContainer.classList.remove("list-view");
+  visdevContainer.classList.add("grid-view");
+
+  gridViewBtn.classList.add("active");
+  listViewBtn.classList.remove("active");
+});
